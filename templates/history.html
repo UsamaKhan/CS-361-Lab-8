@@ -20,6 +20,20 @@
     </select>
 <input type="submit">
 </form>
+<table>
+    <tr>
+        <th>Section</th>
+        <th>Day</th>
+        <th>Date & Time</th>
+    </tr>
+    {% for i in tickets %}
+    <tr>
+        <td>{{ i.section }}</td>
+        <td>{{ i.dayOfWeek }}</td>
+        <td>{{ i.dateTime }}</td>
+    </tr>
+    {% endfor %}
+</table>
 <br/><a href="/">Enter ticket</a>
 </body>
 </html>
